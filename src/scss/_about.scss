@@ -1,0 +1,198 @@
+#about-id {
+	display: none;
+	@include bp-large {
+		display: flex;
+		position: absolute;
+		// width: 15.125rem;
+		width: 16.5;
+		align-items: center;
+		justify-content: space-between;
+		transform: rotate(-90deg) translate(-145px, -95px);
+		span {
+			// width: 5.625rem;
+			width: 12.875rem;
+			letter-spacing: 1rem;
+			color: $light-grey;
+		}
+		.line {
+			height: 2px;
+			background-color: $light-grey;
+			width: 6.5rem;
+		}
+	}
+}
+
+.wrapper {
+	#about {
+		position: relative;
+		@include bp-large {
+			display: flex;
+			align-items: flex-end;
+			margin-bottom: 12.5rem;
+		}
+		h1 {
+			font-size: 8.625rem;
+			transform: translate(2rem, 3rem);
+			position: absolute;
+			z-index: 2;
+			@include bp-large {
+				z-index: 4;
+				top: 0;
+				right: 0;
+				transform: translate(-2rem, 7.55rem);
+				font-size: 11.5rem;
+
+				line-height: 11.5rem;
+			}
+		}
+		.about__img {
+			background-image: url(/dist/img/workinf.png);
+			height: 30.25rem;
+			background-size: cover;
+
+			@include bp-large {
+				position: relative;
+				z-index: 1;
+				width: percentage(635/1110);
+				height: 45rem;
+				background-position: 30%;
+				background-image: linear-gradient(
+						180deg,
+						rgba(0, 0, 0, 0) 0%,
+						rgba(0, 0, 0, 0.5034324942791761) 100%
+					),
+					url(/dist/img/workinf.png);
+			}
+		}
+		.about__text {
+			z-index: 3;
+			position: relative;
+			margin: 1.875rem 2.313rem;
+			@include bp-large {
+				margin: unset;
+				width: percentage(628/1110);
+				background-color: white;
+				height: 31.438rem;
+				transform: translate(-5rem, 0px);
+			}
+			h2 {
+				font-size: 2.9rem;
+				line-height: unset;
+				margin-bottom: 2.875rem;
+				@include bp-large {
+					padding-top: 14.875rem;
+					padding-left: 8.375rem;
+				}
+			}
+			p {
+				@include bp-large {
+					padding-left: 8.375rem;
+				}
+			}
+		}
+	}
+	#heritage {
+		margin-bottom: 5rem;
+		@include bp-large {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			margin-bottom: 12.5rem;
+		}
+		.heritage__img {
+			height: 24.625rem;
+			background-size: cover;
+			background-image: url(/dist/img/workspace.png);
+			@include bp-large {
+				height: unset;
+				width: 35.5rem;
+			}
+		}
+		.heritage__text {
+			margin: 1.875rem 2.313rem;
+			@include bp-large {
+				margin: unset;
+				width: 27.875rem;
+			}
+			h2 {
+				font-size: 2.9rem;
+				line-height: unset;
+				margin-bottom: 2.875rem;
+				@include bp-large {
+					padding-top: 5.813rem;
+					width: 13.188rem;
+				}
+			}
+			p:nth-child(3) {
+				margin: 1rem 0;
+			}
+		}
+	}
+	#leaders {
+		margin-bottom: 11.25rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include bp-large {
+			flex-direction: row;
+			align-items: unset;
+			justify-content: space-between;
+		}
+		h2 {
+			font-size: 2.9rem;
+			line-height: unset;
+			margin-bottom: 2.875rem;
+			width: percentage(301.85/375);
+			@include bp-large {
+				width: 18.75rem;
+			}
+		}
+		.leaders__ringleaders {
+			@include bp-large {
+				display: flex;
+				flex-wrap: wrap;
+				width: 45.625rem;
+				justify-content: flex-end;
+			}
+			.leader {
+				margin-bottom: 2rem;
+				.leader__img {
+					width: 18.813rem;
+					height: 18.813rem;
+					background-size: cover;
+					background-repeat: no-repeat;
+				}
+				h4 {
+					margin-top: 1rem;
+					margin-bottom: 0.75rem;
+				}
+				span {
+					margin-bottom: 2.25rem;
+				}
+			}
+			.leader:nth-child(1) {
+				.leader__img {
+					background-image: url(/dist/img/fluffyhair.png);
+				}
+			}
+			.leader:nth-child(2) {
+				margin-left: 1.875rem;
+				.leader__img {
+					background-image: url(/dist/img/beanie.png);
+				}
+			}
+			.leader:nth-child(3) {
+				.leader__img {
+					background-image: url(/dist/img/teach.png);
+				}
+			}
+			.leader:nth-child(4) {
+				margin-left: 1.875rem;
+				.leader__img {
+					background-image: url(/dist/img/treeelf.png);
+					background-position: center;
+				}
+			}
+		}
+	}
+}

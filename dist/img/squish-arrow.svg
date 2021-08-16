@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.173" height="20" viewBox="0 0 25.173 20" class="hover">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Group_8" data-name="Group 8" transform="translate(-544.97 -2103)">
+    <g id="Group_18" data-name="Group 18" transform="translate(543.5 2103.93)">
+      <path id="Path_3" data-name="Path 3" class="cls-1" d="M-1.881,3,9.16,9.088-1.881,15.135" transform="translate(15.405)"/>
+      <path id="Path" class="cls-1" d="M0,.5H23.1" transform="translate(1.47 8.5)"/>
+    </g>
+    <rect id="Rectangle_3" data-name="Rectangle 3" class="cls-2" width="25.03" height="20" transform="translate(544.97 2103)"/>
+  </g>
+</svg>

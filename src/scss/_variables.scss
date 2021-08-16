@@ -1,0 +1,136 @@
+$breakpoint-actual-mobile: 375px;
+
+$breakpoint-mobile: 480px;
+
+$breakpoint-tablet: 768px;
+
+$breakpoint-desktop: 1024px;
+
+$breakpoint-large-desktop: 1300px;
+
+//Colors
+$very-dark-blue: #1b1d23;
+$dark-grey: #60636d;
+$medium-grey: #7d828f;
+$light-grey: #c8ccd8;
+$very-light-grey: #eeeff4;
+$error: #df5656;
+
+@mixin flex-center {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+@mixin button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: $very-dark-blue;
+	text-decoration: none;
+	color: white;
+	padding: 1.875rem 0;
+
+	.waiting {
+		margin-left: 1.875rem;
+		.cls-1 {
+			fill: none;
+			stroke: #fff;
+			stroke-miterlimit: 10;
+			stroke-width: 2px;
+			&.active {
+				stroke: $very-dark-blue;
+			}
+		}
+	}
+	.hover {
+		display: none;
+	}
+	&:hover {
+		background-color: $dark-grey;
+		.waiting {
+			display: none;
+		}
+		.hover {
+			display: block;
+			margin-left: 1.875rem;
+		}
+	}
+	&.active {
+		background-color: $light-grey;
+		color: $dark-grey;
+	}
+}
+@mixin next {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $very-dark-blue;
+	text-decoration: none;
+	padding: 1.875rem 0;
+	.hover {
+		display: none;
+	}
+	&:hover {
+		background-color: $medium-grey;
+		.waiting {
+			display: none;
+		}
+		.hover {
+			display: block;
+		}
+	}
+	&.active {
+		background-color: $very-dark-blue;
+	}
+}
+@mixin pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $light-grey;
+	text-decoration: none;
+	padding: 1.875rem 0;
+	color: white;
+	&:hover {
+		background-color: $dark-grey;
+	}
+	&.active {
+		background-color: $very-dark-blue;
+	}
+}
+@mixin bp-small {
+	@media screen and (min-width: $breakpoint-mobile) {
+		@content;
+	}
+}
+
+@mixin bp-med {
+	@media screen and (min-width: $breakpoint-tablet) {
+		@content;
+	}
+}
+
+@mixin bp-large {
+	@media screen and (min-width: $breakpoint-desktop) {
+		@content;
+	}
+}
+
+@mixin bp-ld {
+	@media screen and (min-width: $breakpoint-large-desktop) {
+		@content;
+	}
+}
+
+@mixin iPhone-x {
+	@media only screen and (device-width: $breakpoint-actual-mobile) {
+		@content;
+	}
+}
+// @mixin iPhone-x {
+// 	@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+// 		@content;
+// 	}
+// }

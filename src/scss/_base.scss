@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	// overflow: hidden;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Spartan', sans-serif;
+	// overflow: hidden;
+}
+.pagination__page {
+	@include pagination;
+}
+// .wrapper {
+// }
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+// }
+
+h1 {
+	font-family: 'Spartan', sans-serif;
+	font-size: 12.5rem;
+	font-weight: 700;
+	line-height: 12.5rem;
+	color: $very-light-grey;
+	letter-spacing: -0.313rem;
+}
+
+h2 {
+	font-family: 'Spartan', sans-serif;
+	font-size: 5rem;
+	line-height: 5rem;
+	font-weight: 700;
+	color: $very-dark-blue;
+	letter-spacing: -0.125rem;
+}
+
+h3 {
+	font-family: 'Spartan', sans-serif;
+	font-size: 3.5rem;
+	line-height: 3.5rem;
+	font-weight: 700;
+	color: $very-dark-blue;
+	letter-spacing: -0.125rem;
+}
+
+h4 {
+	font-family: 'Spartan', sans-serif;
+	font-size: 1.125rem;
+	line-height: 1.563rem;
+	font-weight: 700;
+	color: $very-dark-blue;
+}
+
+// h5 {
+// }
+
+// h6 {
+// }
+
+p {
+	font-family: 'Spartan', sans-serif;
+	font-weight: 500;
+	font-size: 0.938rem;
+	line-height: 1.563rem;
+	color: $dark-grey;
+}
+// ul,
+// ol,
+// a {
+// }
+
+// ol {
+// 	li {
+// 	}
+// }
+
+a {
+	font-family: 'Spartan', sans-serif;
+	font-size: 0.938rem;
+	text-decoration: none;
+	.hover {
+		display: none;
+	}
+	&:hover {
+		.waiting {
+			display: none;
+		}
+		.hover {
+			display: block;
+		}
+	}
+}
+
+// span {
+// }
+
+// header {
+// }

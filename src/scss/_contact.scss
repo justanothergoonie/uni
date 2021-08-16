@@ -1,0 +1,205 @@
+#contact-id {
+	display: none;
+	@include bp-large {
+		display: flex;
+		position: absolute;
+		width: 19.563rem;
+		align-items: center;
+		justify-content: space-between;
+		transform: rotate(-90deg) translate(-148px, -45px);
+		span {
+			width: 5.625rem;
+			letter-spacing: 1rem;
+			color: $light-grey;
+		}
+		.line {
+			height: 2px;
+			background-color: $light-grey;
+			width: 6.5rem;
+		}
+	}
+}
+.wrapper {
+	#contact {
+		position: relative;
+		margin-bottom: 5rem;
+		@include bp-large {
+			display: flex;
+			align-items: flex-end;
+			margin-bottom: 12.5rem;
+		}
+		h1 {
+			font-size: 8.625rem;
+			transform: translate(2rem, 3rem);
+			position: absolute;
+			z-index: 2;
+			@include bp-large {
+				z-index: 4;
+				top: 0;
+				right: 0;
+				transform: translate(-2rem, 7.55rem);
+				font-size: 11.5rem;
+
+				line-height: 11.5rem;
+			}
+		}
+		.contact__img {
+			background-image: url(/dist/img/phone.png);
+			height: 30.25rem;
+			background-size: cover;
+			@include bp-large {
+				position: relative;
+				z-index: 1;
+				width: percentage(635/1110);
+				height: 45rem;
+				background-position: 30%;
+				background-image: linear-gradient(
+						180deg,
+						rgba(0, 0, 0, 0) 0%,
+						rgba(0, 0, 0, 0.5034324942791761) 100%
+					),
+					url(/dist/img/phone.png);
+			}
+		}
+		.contact__text {
+			z-index: 3;
+			position: relative;
+			margin: 1.875rem 2.313rem;
+			@include bp-large {
+				margin: unset;
+				width: percentage(628/1110);
+				background-color: white;
+				height: 31.438rem;
+				transform: translate(-5rem, 0px);
+			}
+			h2 {
+				font-size: 2.9rem;
+				line-height: unset;
+				margin-bottom: 2.875rem;
+				@include bp-large {
+					padding-top: 14.875rem;
+					padding-left: 8.375rem;
+				}
+			}
+			p {
+				@include bp-large {
+					padding-left: 8.375rem;
+				}
+			}
+		}
+	}
+	#details {
+		margin-bottom: 9rem;
+		.details__img {
+			height: 24.625rem;
+			background-size: cover;
+			background-image: url(/dist/img/map.png);
+			background-position: 65%;
+			@include bp-large {
+				height: 39.813rem;
+			}
+		}
+		.details__text {
+			margin: 1.875rem 2.313rem;
+			@include bp-large {
+				display: flex;
+				justify-content: space-between;
+				margin: unset;
+			}
+			h2 {
+				font-size: 2.9rem;
+				line-height: 3.5rem;
+				margin-bottom: 2.875rem;
+				@include bp-large {
+					width: 12.188rem;
+				}
+			}
+			.main {
+				margin-bottom: 3rem;
+
+				h4 {
+					font-size: 1rem;
+					color: $dark-grey;
+					margin-bottom: 1.5rem;
+					@include bp-large {
+						margin-bottom: 1rem;
+					}
+				}
+				p {
+					padding-bottom: 1rem;
+				}
+			}
+			.other {
+				h4 {
+					font-size: 1rem;
+					color: $dark-grey;
+					margin-bottom: 1.5rem;
+					@include bp-large {
+						margin-bottom: 1rem;
+					}
+				}
+				p {
+					padding-bottom: 1rem;
+				}
+			}
+		}
+	}
+	#form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 11.25rem;
+		@include bp-large {
+			flex-direction: row;
+			align-items: unset;
+			justify-content: space-between;
+		}
+		h2 {
+			font-size: 2.9rem;
+			line-height: unset;
+			margin-bottom: 2.875rem;
+			@include bp-large {
+				width: 17.125rem;
+			}
+		}
+		.desktop__flex {
+			width: 80.8%;
+			@include bp-large {
+				width: 45.625rem;
+			}
+			form {
+				height: 13.75rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				margin-bottom: 2.5rem;
+				@include bp-large {
+					margin-bottom: unset;
+				}
+				input {
+					border: none;
+					border-bottom: 1px solid $dark-grey;
+					height: 33.33%;
+					padding-left: 2.188rem;
+					&::placeholder {
+						color: $light-grey;
+						font-size: 1.25rem;
+						// padding-left: 2.188rem;
+						font-weight: 700;
+					}
+				}
+			}
+			.button__test {
+				// width: 80.8%;
+				display: flex;
+				justify-content: flex-end;
+				a {
+					@include button;
+					width: 5rem;
+					justify-content: unset;
+					align-self: flex-end;
+				}
+			}
+		}
+	}
+}
