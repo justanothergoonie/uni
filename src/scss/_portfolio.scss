@@ -1,26 +1,35 @@
-#portfolio-id {
+.gutter{
 	display: none;
-	@include bp-large {
+	@include bp-large{
 		display: flex;
+		height: 100vh;
 		position: absolute;
-		// width: 15.125rem;
-		width: 22.375rem;
-		align-items: center;
-		justify-content: space-between;
-		transform: rotate(-90deg) translate(-170px, -95px);
-		span {
-			// width: 5.625rem;
-			width: 12.875rem;
-			letter-spacing: 1rem;
-			color: $light-grey;
-		}
-		.line {
-			height: 2px;
-			background-color: $light-grey;
-			width: 6.5rem;
+		left: 0%;
+		top: -1%;
+		align-items: flex-start;
+	}
+	#portfolio-id {
+		display: none;
+		@include bp-large {
+			display: flex;
+			align-items: center;
+			width: 300%;
+			transform: rotate(-90deg) translate(-50%, -700%);
+			span {
+				// width: 5.625rem;
+				// width: 12.875rem;
+				letter-spacing: 1rem;
+				color: $light-grey;
+			}
+			.line {
+				height: 2px;
+				background-color: $light-grey;
+				width: 6.5rem;
+			}
 		}
 	}
 }
+
 .wrapper {
 	@include bp-large {
 		width: percentage(1110/1440);
@@ -55,13 +64,13 @@
 			}
 
 			.portfolio__piece {
-				background-image: url(/dist/img/night-ferris.png);
+				background-image: url(../img/night-ferris.png);
 				background-image: linear-gradient(
 						180deg,
 						rgba(0, 0, 0, 0) 0%,
 						rgba(0, 0, 0, 0.5034324942791761) 100%
 					),
-					url(/dist/img/night-ferris.png);
+					url(../img/night-ferris.png);
 				background-repeat: no-repeat;
 				margin: 2rem 0;
 				background-size: cover;
@@ -78,13 +87,13 @@
 			}
 
 			.portfolio__piece {
-				background-image: url(/dist/img/dusk-ferris.png);
+				background-image: url(../img/dusk-ferris.png);
 				background-image: linear-gradient(
 						180deg,
 						rgba(0, 0, 0, 0) 0%,
 						rgba(0, 0, 0, 0.5034324942791761) 100%
 					),
-					url(/dist/img/dusk-ferris.png);
+					url(../img/dusk-ferris.png);
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: 95%;

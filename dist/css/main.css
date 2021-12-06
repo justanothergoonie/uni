@@ -241,26 +241,38 @@ a:hover .hover {
 	background-color: #1b1d23;
 }
 
-#home-id {
+.gutter {
 	display: none;
 }
 
 @media screen and (min-width: 1024px) {
-	#home-id {
+	.gutter {
 		display: flex;
+		height: 100vh;
 		position: absolute;
-		width: 15.125rem;
-		align-items: center;
-		justify-content: space-between;
-		-ms-transform: rotate(-90deg) translate(-110px, -45px);
-		    transform: rotate(-90deg) translate(-110px, -45px);
+		left: 0%;
+		top: -1%;
+		align-items: flex-start;
 	}
-	#home-id span {
-		width: 5.625rem;
+}
+
+.gutter #home-id {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.gutter #home-id {
+		display: flex;
+		align-items: center;
+		width: 200%;
+		-ms-transform: rotate(-90deg) translate(-50%, -300%);
+		    transform: rotate(-90deg) translate(-50%, -300%);
+	}
+	.gutter #home-id span {
 		letter-spacing: 1rem;
 		color: #c8ccd8;
 	}
-	#home-id .line {
+	.gutter #home-id .line {
 		height: 2px;
 		background-color: #c8ccd8;
 		width: 6.5rem;
@@ -306,6 +318,7 @@ a:hover .hover {
 .wrapper header .logo a {
 	z-index: 2;
 	padding: 9.06667%;
+	width: 50%;
 }
 
 .wrapper header .logo a h4 {
@@ -323,11 +336,21 @@ a:hover .hover {
 .wrapper header .logo .pic-holder {
 	padding-right: 9.06667%;
 	z-index: 2;
+	display: flex;
+	justify-content: flex-end;
+	width: 20%;
+}
+
+.wrapper header .logo .pic-holder img {
+	width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
 	.wrapper header .logo .pic-holder {
 		padding-right: unset;
+		padding-bottom: 0.3rem;
+		justify-content: flex-start;
+		width: 22%;
 	}
 }
 
@@ -353,7 +376,7 @@ a:hover .hover {
 	position: absolute;
 	right: 0;
 	justify-content: flex-end;
-	top: -210px;
+	top: -350px;
 	z-index: 1;
 	transition: top 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
@@ -409,6 +432,10 @@ a:hover .hover {
 	padding-bottom: 9.3617%;
 }
 
+.wrapper header nav ul li :hover {
+	color: #c8ccd8;
+}
+
 .wrapper header nav ul li a {
 	color: black;
 	position: relative;
@@ -436,7 +463,7 @@ a:hover .hover {
 .wrapper #hero {
 	padding: 17.74906% 8%;
 	color: white;
-	background-image: url(/dist/img/homeferris.png);
+	background-image: url(../img/homeferris.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position-x: 35%;
@@ -618,14 +645,14 @@ a:hover .hover {
 @media screen and (min-width: 1024px) {
 	.wrapper #welcome .welcome__content .welcome__pic {
 		width: 31.53153%;
-		background-image: url(/dist/img/uni.png);
+		background-image: url(../img/uni.png);
 		background-repeat: no-repeat;
 		background-position: 54% 3%;
 	}
 }
 
 .wrapper #ballance {
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/dist/img/fire-trick.png);
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/fire-trick.png);
 	background-repeat: no-repeat;
 	background-position: 55% 75%;
 	padding: 18.92857% 8%;
@@ -743,8 +770,8 @@ a:hover .hover {
 
 .wrapper #projects .projects__project .balloons {
 	height: 30.264rem;
-	background-image: url(/dist/img/merry.png);
-	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(/dist/img/merry.png);
+	background-image: url(../img/merry.png);
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(../img/merry.png);
 	background-position: 80% 0%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -765,8 +792,8 @@ a:hover .hover {
 
 .wrapper #projects .projects__project .carneys {
 	height: 30.264rem;
-	background-image: url(/dist/img/go-round.png);
-	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(/dist/img/go-round.png);
+	background-image: url(../img/go-round.png);
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(../img/go-round.png);
 	background-position: 50% 0%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -793,10 +820,17 @@ a:hover .hover {
 
 .wrapper #projects .projects__project .leotards {
 	height: 30.264rem;
-	background-image: url(/dist/img/contort.png);
-	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(/dist/img/contort.png);
+	background-image: url(../img/contort.png);
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(../img/contort.png);
 	background-position: 85% 90%;
 	background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+	.wrapper #projects .projects__project .leotards {
+		background-size: cover;
+		background-position: 91% 66%;
+	}
 }
 
 .wrapper #projects .projects__project .leotards h4 {
@@ -915,12 +949,18 @@ a:hover .hover {
 
 .wrapper footer .footer__logo .logo-definer {
 	padding-top: 1.563rem;
+	display: flex;
+	justify-content: center;
 }
 
 @media screen and (min-width: 1024px) {
 	.wrapper footer .footer__logo .logo-definer {
 		padding-top: 3.125rem;
 	}
+}
+
+.wrapper footer .footer__logo .logo-definer img {
+	width: 30%;
 }
 
 .wrapper footer .footer__logo h3 {
@@ -932,6 +972,7 @@ a:hover .hover {
 @media screen and (min-width: 1024px) {
 	.wrapper footer .footer__logo h3 {
 		padding-bottom: 1rem;
+		padding-top: .875rem;
 	}
 }
 
@@ -1032,26 +1073,38 @@ a:hover .hover {
 	}
 }
 
-#portfolio-id {
+.gutter {
 	display: none;
 }
 
 @media screen and (min-width: 1024px) {
-	#portfolio-id {
+	.gutter {
 		display: flex;
+		height: 100vh;
 		position: absolute;
-		width: 22.375rem;
-		align-items: center;
-		justify-content: space-between;
-		-ms-transform: rotate(-90deg) translate(-170px, -95px);
-		    transform: rotate(-90deg) translate(-170px, -95px);
+		left: 0%;
+		top: -1%;
+		align-items: flex-start;
 	}
-	#portfolio-id span {
-		width: 12.875rem;
+}
+
+.gutter #portfolio-id {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.gutter #portfolio-id {
+		display: flex;
+		align-items: center;
+		width: 300%;
+		-ms-transform: rotate(-90deg) translate(-50%, -700%);
+		    transform: rotate(-90deg) translate(-50%, -700%);
+	}
+	.gutter #portfolio-id span {
 		letter-spacing: 1rem;
 		color: #c8ccd8;
 	}
-	#portfolio-id .line {
+	.gutter #portfolio-id .line {
 		height: 2px;
 		background-color: #c8ccd8;
 		width: 6.5rem;
@@ -1103,8 +1156,8 @@ a:hover .hover {
 }
 
 .wrapper #portfolio a:nth-child(odd) .portfolio__piece {
-	background-image: url(/dist/img/night-ferris.png);
-	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(/dist/img/night-ferris.png);
+	background-image: url(../img/night-ferris.png);
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(../img/night-ferris.png);
 	background-repeat: no-repeat;
 	margin: 2rem 0;
 	background-size: cover;
@@ -1125,33 +1178,45 @@ a:hover .hover {
 }
 
 .wrapper #portfolio a:nth-child(even) .portfolio__piece {
-	background-image: url(/dist/img/dusk-ferris.png);
-	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(/dist/img/dusk-ferris.png);
+	background-image: url(../img/dusk-ferris.png);
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(../img/dusk-ferris.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 95%;
 }
 
-#about-id {
+.gutter {
 	display: none;
 }
 
 @media screen and (min-width: 1024px) {
-	#about-id {
+	.gutter {
 		display: flex;
+		height: 100vh;
 		position: absolute;
-		width: 16.5;
-		align-items: center;
-		justify-content: space-between;
-		-ms-transform: rotate(-90deg) translate(-145px, -95px);
-		    transform: rotate(-90deg) translate(-145px, -95px);
+		left: 0%;
+		top: -1%;
+		align-items: flex-start;
 	}
-	#about-id span {
-		width: 12.875rem;
+}
+
+.gutter #about-id {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.gutter #about-id {
+		display: flex;
+		align-items: center;
+		width: 190%;
+		-ms-transform: rotate(-90deg) translate(-50%, -390%);
+		    transform: rotate(-90deg) translate(-50%, -390%);
+	}
+	.gutter #about-id span {
 		letter-spacing: 1rem;
 		color: #c8ccd8;
 	}
-	#about-id .line {
+	.gutter #about-id .line {
 		height: 2px;
 		background-color: #c8ccd8;
 		width: 6.5rem;
@@ -1191,7 +1256,7 @@ a:hover .hover {
 }
 
 .wrapper #about .about__img {
-	background-image: url(/dist/img/workinf.png);
+	background-image: url(../img/workinf.png);
 	height: 30.25rem;
 	background-size: cover;
 }
@@ -1203,7 +1268,7 @@ a:hover .hover {
 		width: 57.20721%;
 		height: 45rem;
 		background-position: 30%;
-		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(/dist/img/workinf.png);
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(../img/workinf.png);
 	}
 }
 
@@ -1259,7 +1324,7 @@ a:hover .hover {
 .wrapper #heritage .heritage__img {
 	height: 24.625rem;
 	background-size: cover;
-	background-image: url(/dist/img/workspace.png);
+	background-image: url(../img/workspace.png);
 }
 
 @media screen and (min-width: 1024px) {
@@ -1355,7 +1420,7 @@ a:hover .hover {
 }
 
 .wrapper #leaders .leaders__ringleaders .leader:nth-child(1) .leader__img {
-	background-image: url(/dist/img/fluffyhair.png);
+	background-image: url(../img/fluffyhair.png);
 }
 
 .wrapper #leaders .leaders__ringleaders .leader:nth-child(2) {
@@ -1363,11 +1428,11 @@ a:hover .hover {
 }
 
 .wrapper #leaders .leaders__ringleaders .leader:nth-child(2) .leader__img {
-	background-image: url(/dist/img/beanie.png);
+	background-image: url(../img/beanie.png);
 }
 
 .wrapper #leaders .leaders__ringleaders .leader:nth-child(3) .leader__img {
-	background-image: url(/dist/img/teach.png);
+	background-image: url(../img/teach.png);
 }
 
 .wrapper #leaders .leaders__ringleaders .leader:nth-child(4) {
@@ -1375,30 +1440,42 @@ a:hover .hover {
 }
 
 .wrapper #leaders .leaders__ringleaders .leader:nth-child(4) .leader__img {
-	background-image: url(/dist/img/treeelf.png);
+	background-image: url(../img/treeelf.png);
 	background-position: center;
 }
 
-#contact-id {
+.gutter {
 	display: none;
 }
 
 @media screen and (min-width: 1024px) {
-	#contact-id {
+	.gutter {
 		display: flex;
+		height: 100vh;
 		position: absolute;
-		width: 19.563rem;
-		align-items: center;
-		justify-content: space-between;
-		-ms-transform: rotate(-90deg) translate(-148px, -45px);
-		    transform: rotate(-90deg) translate(-148px, -45px);
+		left: 0%;
+		top: -1%;
+		align-items: flex-start;
 	}
-	#contact-id span {
-		width: 5.625rem;
+}
+
+.gutter #contact-id {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.gutter #contact-id {
+		display: flex;
+		align-items: center;
+		width: 230%;
+		-ms-transform: rotate(-90deg) translate(-50%, -570%);
+		    transform: rotate(-90deg) translate(-50%, -570%);
+	}
+	.gutter #contact-id span {
 		letter-spacing: 1rem;
 		color: #c8ccd8;
 	}
-	#contact-id .line {
+	.gutter #contact-id .line {
 		height: 2px;
 		background-color: #c8ccd8;
 		width: 6.5rem;
@@ -1439,7 +1516,7 @@ a:hover .hover {
 }
 
 .wrapper #contact .contact__img {
-	background-image: url(/dist/img/phone.png);
+	background-image: url(../img/phone.png);
 	height: 30.25rem;
 	background-size: cover;
 }
@@ -1451,7 +1528,7 @@ a:hover .hover {
 		width: 57.20721%;
 		height: 45rem;
 		background-position: 30%;
-		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(/dist/img/phone.png);
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.503432) 100%), url(../img/phone.png);
 	}
 }
 
@@ -1498,7 +1575,7 @@ a:hover .hover {
 .wrapper #details .details__img {
 	height: 24.625rem;
 	background-size: cover;
-	background-image: url(/dist/img/map.png);
+	background-image: url(../img/map.png);
 	background-position: 65%;
 }
 

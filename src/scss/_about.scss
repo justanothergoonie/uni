@@ -1,26 +1,36 @@
-#about-id {
+.gutter{
 	display: none;
-	@include bp-large {
-		display: flex;
+	@include bp-large{
+	    display: flex;
+		height: 100vh;
 		position: absolute;
-		// width: 15.125rem;
-		width: 16.5;
-		align-items: center;
-		justify-content: space-between;
-		transform: rotate(-90deg) translate(-145px, -95px);
-		span {
-			// width: 5.625rem;
-			width: 12.875rem;
-			letter-spacing: 1rem;
-			color: $light-grey;
-		}
-		.line {
-			height: 2px;
-			background-color: $light-grey;
-			width: 6.5rem;
+		left: 0%;
+		top: -1%;
+		align-items: flex-start;
+
+	}
+	#about-id {
+		display: none;
+		@include bp-large {
+			display: flex;
+			align-items: center;
+			width: 190%;
+			transform: rotate(-90deg) translate(-50%, -390%);
+			span {
+				// width: 5.625rem;
+				// width: 12.875rem;
+				letter-spacing: 1rem;
+				color: $light-grey;
+			}
+			.line {
+				height: 2px;
+				background-color: $light-grey;
+				width: 6.5rem;
+			}
 		}
 	}
 }
+
 
 .wrapper {
 	#about {
@@ -46,7 +56,7 @@
 			}
 		}
 		.about__img {
-			background-image: url(/dist/img/workinf.png);
+			background-image: url(../img/workinf.png);
 			height: 30.25rem;
 			background-size: cover;
 
@@ -61,7 +71,7 @@
 						rgba(0, 0, 0, 0) 0%,
 						rgba(0, 0, 0, 0.5034324942791761) 100%
 					),
-					url(/dist/img/workinf.png);
+					url(../img/workinf.png);
 			}
 		}
 		.about__text {
@@ -102,7 +112,7 @@
 		.heritage__img {
 			height: 24.625rem;
 			background-size: cover;
-			background-image: url(/dist/img/workspace.png);
+			background-image: url(../img/workspace.png);
 			@include bp-large {
 				height: unset;
 				width: 35.5rem;
@@ -172,24 +182,24 @@
 			}
 			.leader:nth-child(1) {
 				.leader__img {
-					background-image: url(/dist/img/fluffyhair.png);
+					background-image: url(../img/fluffyhair.png);
 				}
 			}
 			.leader:nth-child(2) {
 				margin-left: 1.875rem;
 				.leader__img {
-					background-image: url(/dist/img/beanie.png);
+					background-image: url(../img/beanie.png);
 				}
 			}
 			.leader:nth-child(3) {
 				.leader__img {
-					background-image: url(/dist/img/teach.png);
+					background-image: url(../img/teach.png);
 				}
 			}
 			.leader:nth-child(4) {
 				margin-left: 1.875rem;
 				.leader__img {
-					background-image: url(/dist/img/treeelf.png);
+					background-image: url(../img/treeelf.png);
 					background-position: center;
 				}
 			}

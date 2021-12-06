@@ -9,4 +9,29 @@ var toggleNav = function toggleNav() {
 };
 
 uniButton.addEventListener('click', toggleNav);
+var wrapMarg = document.querySelector('.wrapper');
+var gutter = document.querySelector('.gutter');
+var marg = window.getComputedStyle(wrapMarg);
+console.log(marg.marginLeft); // let marginLeft = parseInt(marg.marginLeft);
+
+var marginRight = parseInt(marg.marginRight);
+var marginTop = parseInt(marg.marginTop);
+var marginBottom = parseInt(marg.marginBottom);
+
+var windowCheck = function windowCheck() {
+  window.addEventListener('resize', function () {
+    var marginLeft = marg.marginLeft;
+    gutter.style.width = marginLeft;
+  });
+  window.addEventListener('load', function () {
+    var marginLeft = marg.marginLeft;
+    gutter.style.width = marginLeft;
+  });
+}; // gutter.style.width = marginLeft+'px';
+
+
+windowCheck();
+setTimeout(function () {
+  windowCheck();
+}, 1000);
 //# sourceMappingURL=main.js.map

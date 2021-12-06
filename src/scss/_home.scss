@@ -1,17 +1,26 @@
 .pagination__page {
 	@include pagination;
 }
-#home-id {
+.gutter{
+	display: none;
+	@include bp-large{
+	    display: flex;
+		height: 100vh;
+		position: absolute;
+		left: 0%;
+		top: -1%;
+		align-items: flex-start;
+	}
+    
+	#home-id {
 	display: none;
 	@include bp-large {
 		display: flex;
-		position: absolute;
-		width: 15.125rem;
 		align-items: center;
-		justify-content: space-between;
-		transform: rotate(-90deg) translate(-110px, -45px);
+		width: 200%;
+		transform: rotate(-90deg) translate(-50%, -300%);
 		span {
-			width: 5.625rem;
+			// width: 5.625rem;
 			letter-spacing: 1rem;
 			color: $light-grey;
 		}
@@ -22,6 +31,8 @@
 		}
 	}
 }
+}
+
 .wrapper {
 	width: 100vw;
 	overflow: hidden;
@@ -47,6 +58,7 @@
 			a {
 				z-index: 2;
 				padding: percentage(34/375);
+				width: 50%;
 				h4 {
 					font-size: 2rem;
 					font-weight: unset;
@@ -61,9 +73,23 @@
 			.pic-holder {
 				padding-right: percentage(34/375);
 				z-index: 2;
+				display: flex;
+				justify-content: flex-end;
+				width: 20%;
+				img{
+					width: 100%;
+				}
 				@include bp-large {
 					padding-right: unset;
+					padding-bottom: 0.3rem;
+					justify-content: flex-start;
+					width: 22%;
+				
 				}
+				// @include bp-ld{
+				// 	width: 40%;
+				// }
+		
 			}
 			.overlay {
 				position: absolute;
@@ -84,7 +110,7 @@
 			position: absolute;
 			right: 0;
 			justify-content: flex-end;
-			top: -210px;
+			top: -350px;
 			z-index: 1;
 			transition: top 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
 			@include bp-large {
@@ -124,12 +150,16 @@
 				li {
 					padding-top: percentage(22/235);
 					padding-bottom: percentage(22/235);
+					:hover{
+						color:$light-grey;
+					}
 					a {
 						color: black;
 						position: relative;
 						font-weight: 700;
 						padding-top: percentage(22/235);
 						padding-bottom: percentage(22/235);
+	
 						@include bp-large {
 							&.active {
 								color: $light-grey;
@@ -143,6 +173,7 @@
 									transform: translate(-110%, 0rem);
 								}
 							}
+		
 						}
 					}
 				}
@@ -152,7 +183,7 @@
 	#hero {
 		padding: percentage(100/563.41) percentage(30/375);
 		color: white;
-		background-image: url(/dist/img/homeferris.png);
+		background-image: url(../img/homeferris.png);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position-x: 35%;
@@ -252,7 +283,7 @@
 			.welcome__pic {
 				@include bp-large {
 					width: percentage(350/1110);
-					background-image: url(/dist/img/uni.png);
+					background-image: url(../img/uni.png);
 					background-repeat: no-repeat;
 					background-position: 54% 3%;
 				}
@@ -261,7 +292,7 @@
 	}
 	#ballance {
 		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-			url(/dist/img/fire-trick.png);
+			url(../img/fire-trick.png);
 		background-repeat: no-repeat;
 		// background-size: cover;
 		background-position: 55% 75%;
@@ -320,13 +351,13 @@
 			}
 			.balloons {
 				height: 30.264rem;
-				background-image: url(/dist/img/merry.png);
+				background-image: url(../img/merry.png);
 				background-image: linear-gradient(
 						180deg,
 						rgba(0, 0, 0, 0) 0%,
 						rgba(0, 0, 0, 0.5034324942791761) 100%
 					),
-					url(/dist/img/merry.png);
+					url(../img/merry.png);
 				background-position: 80% 0%;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -345,13 +376,13 @@
 			}
 			.carneys {
 				height: 30.264rem;
-				background-image: url(/dist/img/go-round.png);
+				background-image: url(../img/go-round.png);
 				background-image: linear-gradient(
 						180deg,
 						rgba(0, 0, 0, 0) 0%,
 						rgba(0, 0, 0, 0.5034324942791761) 100%
 					),
-					url(/dist/img/go-round.png);
+					url(../img/go-round.png);
 				background-position: 50% 0%;
 				background-repeat: no-repeat;
 				background-size: cover;
@@ -373,15 +404,19 @@
 			}
 			.leotards {
 				height: 30.264rem;
-				background-image: url(/dist/img/contort.png);
+				background-image: url(../img/contort.png);
 				background-image: linear-gradient(
 						180deg,
 						rgba(0, 0, 0, 0) 0%,
 						rgba(0, 0, 0, 0.5034324942791761) 100%
 					),
-					url(/dist/img/contort.png);
+					url(../img/contort.png);
 				background-position: 85% 90%;
 				background-repeat: no-repeat;
+				@include bp-med{
+					background-size: cover;
+					background-position: 91% 66%;
+				}
 				// background-size: cover;
 
 				h4 {
@@ -440,8 +475,13 @@
 			}
 			.logo-definer {
 				padding-top: 1.563rem;
+				display: flex;
+				justify-content: center;
 				@include bp-large {
 					padding-top: 3.125rem;
+				}
+				img{
+					width: 30%;
 				}
 			}
 			h3 {
@@ -450,6 +490,7 @@
 				color: white;
 				@include bp-large {
 					padding-bottom: 1rem;
+					padding-top: .875rem;
 				}
 			}
 		}
